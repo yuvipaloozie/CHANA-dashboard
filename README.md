@@ -1,6 +1,6 @@
 # CHANA Dashboard
 
-The CHANA (Computational Hematology and Neuroscience Analysis) Dashboard is a powerful, full-stack application built to run state-of-the-art Deep Learning models (like UNet++ and TransUNet) for automated cell segmentation, circularity analysis, and spatial morphology mapping on biological specimen imagery.
+The CHANA Dashboard is a powerful, full-stack application built to run state-of-the-art deep learning models for automated cell segmentation, circularity analysis, and spatial morphology mapping on biological specimen imagery.
 
 ## Tech Stack
 * **Frontend:** React + Vite + Tailwind CSS
