@@ -11,3 +11,7 @@ Model Weights/*.weights.h5
 node_modules/
 dist/
 .DS_Store
+
+dist/
+build/
+*.spec

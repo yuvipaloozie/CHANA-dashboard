@@ -17,7 +17,20 @@ from chana.preprocessor import preprocess_v9
 from chana.onnx_engine import get_model, predict_batch
 from chana.biology import extract_biology
 
-app = FastAPI(title="CHANA Dashboard API")
+import threading
+import webbrowser
+import time
+from contextlib import asynccontextmanager
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    def open_browser():
+        time.sleep(1)
+        webbrowser.open("http://127.0.0.1:8000")
+    threading.Thread(target=open_browser, daemon=True).start()
+    yield
+
+app = FastAPI(title="CHANA Dashboard API", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
@@ -176,4 +189,6 @@ if os.path.isdir(frontend_path):
         return FileResponse(os.path.join(frontend_path, "index.html"))
 
 if __name__ == "__main__":
-    uvicorn.run("api:app", host="0.0.0.0", port=8000, reload=True)
+    import multiprocessing
+    multiprocessing.freeze_support()
+    uvicorn.run(app, host="127.0.0.1", port=8000)
