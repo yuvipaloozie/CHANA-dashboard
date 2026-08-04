@@ -1,0 +1,13 @@
+# Environment
+.env
+.venv/
+__pycache__/
+
+# Datasets & Heavy Weights
+Input Data/
+Model Weights/*.weights.h5
+
+# Node
+node_modules/
+dist/
+.DS_Store

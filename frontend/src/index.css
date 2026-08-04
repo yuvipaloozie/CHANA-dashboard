@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-outfit: "Outfit", sans-serif;
+  --color-bento-bg: var(--color-bento-bg-val);
+  --color-bento-card: var(--color-bento-card-val);
+  --color-bento-primary: var(--color-bento-primary-val);
+  --color-bento-primaryHover: var(--color-bento-primaryHover-val);
+  --color-bento-accent: var(--color-bento-accent-val);
+  --color-bento-text: var(--color-bento-text-val);
+  --color-bento-subtext: var(--color-bento-subtext-val);
+  --color-bento-border: var(--color-bento-border-val);
+}
+
+:root {
+  /* Burgundy / Magenta Theme */
+  --color-bento-bg-val: #fcf9fb;
+  --color-bento-card-val: rgba(255, 255, 255, 0.7);
+  --color-bento-primary-val: #9f1239; /* rose-800 */
+  --color-bento-primaryHover-val: #881337; /* rose-900 */
+  --color-bento-accent-val: #d946ef; /* fuchsia-500 */
+  --color-bento-text-val: #3f1d24;
+  --color-bento-subtext-val: #865e67;
+  --color-bento-border-val: rgba(244, 226, 232, 0.6);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at top left, #fdf4f6, #f3e8ff, #fdf4f6);
+  background-attachment: fixed;
+}
+
+/* Custom Scrollbar for Bento Box aesthetic */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: rgba(217, 70, 239, 0.3);
+  border-radius: 10px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(159, 18, 57, 0.5);
+}
