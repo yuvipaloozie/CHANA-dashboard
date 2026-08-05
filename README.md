@@ -44,3 +44,7 @@ The CHANA Dashboard is a powerful, full-stack application built to run state-of-
    ```
 
 Visit `http://localhost:5173` to view the dashboard!
+
+### Downloadabe file
+Go to the lastest release on this Github repo and download the large .exe file. Opening this should allow the entire dashboard to run locally on your pc!
+
